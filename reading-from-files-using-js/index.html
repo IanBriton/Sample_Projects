@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script defer src="script.js"></script>
+    <title>Reading from Files Using JS</title>
+  </head>
+  <body>
+    <form action="">
+      <input
+        type="file"
+        name="file"
+        placeholder="Choose File"
+        id="file-input"
+      />
+      <label for="file" id="label"></label>
+      <select name="" id="selection">
+        <option value="selection">Select Data Type</option>
+        <option value="Temperature">Temperature</option>
+        <option value="Wind">Wind</option>
+        <option value="Precipitation">Precipitation</option>
+        <option value="Stock-market">Stock Market</option>
+      </select>
+      <button type="button" class="save-data btn">Save Data</button>
+      <button type="button" class="load-data btn">Load Data</button>
+    </form>
+    <div class="data-stats">
+      <p>Average: <span class="average-value data"></span></p>
+      <p>Min: <span class="min-value data"></span></p>
+      <p>Max: <span class="max-value data"></span></p>
+    </div>
+    <div id="myPlot"></div>
+  </body>
+</html>

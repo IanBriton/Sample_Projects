@@ -1,0 +1,232 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 2em;
+  font-size: 1.5rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.div-header {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  gap: 1.2rem;
+}
+.div-header select {
+  color: purple;
+  border: none;
+  background: none;
+  border-right: 1px solid grey;
+  margin-right: 0.3rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.div-header select:focus {
+  outline: none;
+}
+.fa-book {
+  color: grey;
+  /* background: black; */
+  font-size: 2.5rem;
+}
+.btn {
+  /* border-left: 2px solid grey; */
+  width: 4rem;
+  height: 2rem;
+  margin-top: 0.3rem;
+  border-radius: 50px;
+  color: white;
+  background: grey;
+  border: none;
+}
+/* .btn::after {
+  content: "Hello";
+  background: red;
+  width: 4rem;
+  height: 2rem;
+} */
+.main {
+  border-bottom: 1px solid grey;
+  margin-bottom: 2rem;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.fa-moon {
+  margin-top: 0.3rem;
+  font-size: 2rem;
+}
+.search-bar {
+  margin: 2em auto;
+  display: block;
+  height: 3rem;
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 15px;
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  background: rgb(224, 223, 223);
+}
+.search-bar:focus {
+  outline: none;
+}
+.fa-magnifying-glass {
+  position: absolute;
+  top: 27.5%;
+  right: 7%;
+  color: grey;
+  font-size: 1.5rem;
+}
+.fa-magnifying-glass:hover {
+  cursor: pointer;
+}
+.word-sound {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid grey;
+}
+.word-pronunciation {
+  display: flex;
+  flex-direction: column;
+}
+.word-pronunciation .word {
+  text-align: left;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.word-pronunciation .pronunciation {
+  color: purple;
+  font-style: italic;
+  margin-bottom: 3rem;
+}
+.sound-btn {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50px;
+  font-size: 2rem;
+  padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+  border: none;
+  color: purple;
+  background: rgb(224, 178, 224);
+}
+.sound-btn:hover {
+  cursor: pointer;
+}
+.type-of-speech {
+  margin: 2rem 0rem 2rem 0rem;
+  background: white;
+  padding: 1rem 0rem;
+  font-style: italic;
+  font-weight: lighter;
+}
+.word-meaning {
+  opacity: 0.8;
+  margin: 0.5rem 0rem;
+}
+
+.meaning {
+  margin: 1.5rem;
+  list-style-type: none;
+}
+.meaning li {
+  /* margin: 0.5rem; */
+  list-style-position: inside;
+}
+.meaning li::before {
+  content: "\2022";
+  color: purple;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  opacity: 0.8;
+  font-weight: 100;
+}
+.synonym {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid grey;
+  padding: 2rem 0rem 2rem 0rem;
+  /* font-family: sans; */
+}
+.span {
+  font-style: normal;
+  color: purple;
+  font-weight: bold;
+}
+.word-source {
+  display: flex;
+  margin: 1rem;
+  flex-direction: row;
+  gap: 2rem;
+}
+.word-source h4 {
+  opacity: 0.7;
+  font-weight: normal;
+}
+.circle-button {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #007bff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.inner-circle {
+  position: absolute;
+  top: 13.3%;
+  right: 18%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  background-color: #222;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:active .inner-circle {
+  transform: translateX(-32px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn:active .inner-circle {
+  transform: translateX(32px);
+  transition: transform 0.3s ease-in-out;
+}
+@media screen and (min-width: 768px) {
+  .inner-circle {
+    position: absolute;
+    top: 8.4%;
+    right: 8%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    background-color: #222;
+    transition: transform 0.3s ease-in-out;
+  }
+  .fa-magnifying-glass {
+    position: absolute;
+    top: 17.5%;
+    right: 4%;
+    color: grey;
+    font-size: 1.5rem;
+  }
+}
